@@ -1,0 +1,10 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false
+  },
+  "rules": {
+    "strict": 2
+  }
+}

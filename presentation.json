@@ -1,0 +1,16 @@
+{
+  "sections": [
+    {
+      "name": "Intro",
+      "markdown": "## Page title\nA paragraph with some text and a [link](http://hakim.se)."
+    },
+    {
+      "name": "Two",
+      "markdown": "## Next Slide\n Some other infor on the next slide"
+    },
+    {
+      "name": "Three",
+      "markup": "<section><h2>Third slide as markup</h2><p>Some text</p><aside class='notes'>Hey some notes here</aside>"
+    }
+  ]
+}

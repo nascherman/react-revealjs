@@ -1,0 +1,56 @@
+{
+  "name": "react-revealjs",
+  "version": "0.1.0",
+  "description": "React component for a reaveal-js presentation. Pass in sections to create your presentation.",
+  "main": "index.js",
+  "dependencies": {
+    "babel-polyfill": "^6.16.0",
+    "react": "^15.4.0",
+    "reveal.js": "^3.3.0",
+    "uglifyjs": "^2.4.10"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babelify": "^7.3.0",
+    "brfs": "^1.4.3",
+    "browserify": "^13.1.1",
+    "budo": "^9.2.2",
+    "chalk": "^1.1.3",
+    "derequire": "^2.0.3",
+    "fs": "0.0.1-security",
+    "less-css-stream": "^1.0.0",
+    "less-plugin-autoprefix": "^1.5.1",
+    "path": "^0.12.7",
+    "react-dom": "^15.4.0",
+    "uglifyjs": "^2.4.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bundler.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nascherman/react-revealjs.git"
+  },
+  "keywords": [
+    "react",
+    "reveal-js"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "author": "nascherman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nascherman/react-revealjs/issues"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify"
+      ]
+    ]
+  },
+  "homepage": "https://github.com/nascherman/react-revealjs#readme"
+}
