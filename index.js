@@ -7,8 +7,7 @@ class ReactReveal extends React.Component {
        dependencies: [
         { src: '//cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
         { src: '///cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/markdown/markdown.min.js',  condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-        
+        { src: '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }   
       ]
     })
     super(props)
@@ -44,8 +43,14 @@ class ReactReveal extends React.Component {
     let jsx = '';
     this.props.sections.forEach((section, i) => {
       if(section.markdown) {
+        let dataSeparator = section.dataSeparator 
+        ? `data-separator="${section.dataSeparator}"`: null;
+        let dataSeparatorVertical = section.dataSeparatorVertical 
+        ? `data-separator-vertical="${section.dataSeparatorVertical}"` : null;
+        let dataSeparatorNotes = section.dataSeparatorNotes 
+        ? `data-separator-notes="${section.dataSeparatorNotes}"` : null;
         let  markdown = `
-          <section data-markdown>
+          <section data-markdown ${dataSeparator} ${dataSeparatorVertical} ${dataSeparatorNotes}>
             <script type="text/template">
               ${section.markdown}
             </script>
