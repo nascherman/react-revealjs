@@ -3,13 +3,6 @@ const Reveal = require('reveal.js');
 
 class ReactReveal extends React.Component {
   constructor(props) {
-    Object.assign(props.reveal, {
-       dependencies: [
-        { src: '//cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: '///cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/markdown/markdown.min.js',  condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }   
-      ]
-    })
     super(props)
     if(!this.props.sections) {
       throw new Error('Need to include sections!', 
